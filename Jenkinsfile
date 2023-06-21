@@ -70,6 +70,31 @@ pipeline{
                     }
                 }
             }
+
+        stage('Upload jar file to nexus'){
+                
+                steps{
+                    
+                    script{
+                        
+                       nexusArtifactUploader artifacts: [
+                           [
+                               artifactId: 'springboot',
+                               classifier: '',
+                               file: 'target/Uber.jar',
+                               type: 'jar'
+                           ]
+                       ],
+                           credentialsId: 'nexus-auth',
+                           groupId: 'com.example',
+                           nexusUrl: '54.66.183.45:8081', 
+                           nexusVersion: 'nexus3',
+                           protocol: 'http', 
+                           repository: 'Jenkins-release',
+                           version: '1.0.0'
+                    }
+                }
+            }
         }
         
 }
