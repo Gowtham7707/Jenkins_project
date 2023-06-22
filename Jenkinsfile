@@ -77,7 +77,11 @@ pipeline{
                     script{
 
                        def readPomVersion = readMavenPom file: 'pom.xml'
+<<<<<<< HEAD
                        def nexusRepo = readPomVersion.version.endsWith("SNAPSHOT") ? "Jenkins-snapshot" : "Jenkins-release"
+=======
+                        def nexusRepo = readPomVersion.version.endsWith("SNAPSHOT") ? "Jenkins-snapshot" : "Jenkins-release"
+>>>>>>> 32f162a04667dd0b70426a5b32aec5b4d7fe7ab3
                        nexusArtifactUploader artifacts: [
                            [
                                artifactId: 'springboot',
@@ -88,14 +92,22 @@ pipeline{
                        ],
                            credentialsId: 'nexus-auth',
                            groupId: 'com.example',
+<<<<<<< HEAD
                            nexusUrl: '54.66.183.45:8081', 
                            nexusVersion: 'nexus3',
                            protocol: 'http', 
                            repository: nexusRepo ,
+=======
+                           nexusUrl: '3.27.16.77:8081', 
+                           nexusVersion: 'nexus3',
+                           protocol: 'http', 
+                           repository: nexusRepo,                 
+>>>>>>> 32f162a04667dd0b70426a5b32aec5b4d7fe7ab3
                            version: "${readPomVersion.version}"
                     }
                 }
             }
+<<<<<<< HEAD
             stage('Docker image build'){
 
                 steps{ 
@@ -110,6 +122,8 @@ pipeline{
 
                 }
             }
+=======
+>>>>>>> 32f162a04667dd0b70426a5b32aec5b4d7fe7ab3
         }
         
 }

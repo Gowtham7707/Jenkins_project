@@ -10,7 +10,11 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>springboot</artifactId>
+<<<<<<< HEAD
 	<version>1.0.1</version>
+=======
+	<version>1.0.3-SNAPSHOT</version>
+>>>>>>> 32f162a04667dd0b70426a5b32aec5b4d7fe7ab3
 	<name>springboot</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
