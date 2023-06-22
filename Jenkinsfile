@@ -91,8 +91,8 @@ pipeline{
                            nexusUrl: '54.66.183.45:8081', 
                            nexusVersion: 'nexus3',
                            protocol: 'http', 
-                           repository: nexusRepo ,
-                           version: "1.0.1"
+                           repository: 'Jenkins-release',                 
+                           version: '1.0.1'
                     }
                 }
             }
