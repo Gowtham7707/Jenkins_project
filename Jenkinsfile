@@ -88,7 +88,7 @@ pipeline{
                        ],
                            credentialsId: 'nexus-auth',
                            groupId: 'com.example',
-                           nexusUrl: '54.66.183.45:8081', 
+                           nexusUrl: '3.27.16.77:8081', 
                            nexusVersion: 'nexus3',
                            protocol: 'http', 
                            repository: 'Jenkins-release',                 
