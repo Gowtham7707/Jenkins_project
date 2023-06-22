@@ -110,6 +110,21 @@ pipeline{
 
                 }
             }
+        stage('push image to Docker hub'){
+
+                steps{ 
+
+                    script{
+
+                           
+                           withCredentials([string(credentialsId: 'docker_hub', variable: 'docker_hub_cred')]) {
+                             sh 'docker login -u gowthamc121 -p ${docker_hub_cred}'
+                      }
+
+                    }
+
+                }
+            }
         }
         
 }
